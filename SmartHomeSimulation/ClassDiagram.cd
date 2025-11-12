@@ -62,7 +62,7 @@
   <Class Name="M320_SmartHome.Wohnung">
     <Position X="20" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAgAAAAAAAgCAAAAAAAAAAAAAAAAAAAIAAAAAAAgA=</HashCode>
+      <HashCode>AAQAgAAAAAAAgCACAAAAAAAAAAAAAAAAAIAAAAAAAgA=</HashCode>
       <FileName>Wohnung.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -81,35 +81,65 @@
     </TypeIdentifier>
   </Class>
   <Class Name="M320_SmartHome.ZimmerMitAktor">
-    <Position X="15" Y="3.75" Width="1.5" />
+    <Position X="14.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAABAAAAAgAAAAAAAAIAAAAAAIAAAA=</HashCode>
       <FileName>ZimmerMitAktor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="M320_SmartHome.ZimmerMitHeizungsventil">
-    <Position X="12.25" Y="7.25" Width="1.5" />
+    <Position X="11.75" Y="7.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ZimmerMitHeizungsventil.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="M320_SmartHome.ZimmerMitJalousiesteuerung">
-    <Position X="15" Y="7.25" Width="1.5" />
+    <Position X="14.5" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ZimmerMitJalousiesteuerung.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="M320_SmartHome.ZimmerMitMarkisensteuerung">
-    <Position X="17.75" Y="7.25" Width="1.5" />
+    <Position X="17.25" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ZimmerMitMarkisensteuerung.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="M320_SmartHome.ConsoleFileLogger" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleFileLogger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="M320_SmartHome.IntelligenteLueftung">
+    <Position X="8.75" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IntelligenteLueftung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="M320_SmartHome.ZimmerMitIntelligenterLueftung">
+    <Position X="8.75" Y="7.25" Width="2.5" />
+    <InheritanceLine Type="M320_SmartHome.ZimmerMitAktor" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="6.204" />
+        <Point X="15.25" Y="6.875" />
+        <Point X="9.875" Y="6.875" />
+        <Point X="9.875" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>ZimmerMitIntelligenterLueftung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="M320_SmartHome.Wetterdaten">
-    <Position X="20" Y="5" Width="1.5" />
+    <Position X="20" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAQAAAABAAAAAAAA=</HashCode>
       <FileName>Wetterdaten.cs</FileName>
@@ -120,6 +150,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IWettersensor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="M320_SmartHome.ILogger">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILogger.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

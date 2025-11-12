@@ -17,8 +17,8 @@
             wohnung.SetPersonenImZimmer("Wohnen", true);
             wohnung.SetPersonenImZimmer("Wintergarten", true);
 
-            for(var i = 0; i<zeitdauerMinuten; i++) {
-                wohnung.GenerateWetterdaten(i+1);
+            for (var i = 0; i < zeitdauerMinuten; i++) {
+                wohnung.GenerateWetterdaten(i + 1);
             }
         }
     }

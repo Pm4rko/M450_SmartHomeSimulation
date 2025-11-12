@@ -6,17 +6,19 @@
         public bool JalousieHeruntergefahren { get; private set; }
 
         public override void VerarbeiteWetterdaten(Wetterdaten wetterdaten) {
-            if(wetterdaten.Aussentemperatur > this.Zimmer.Temperaturvorgabe) {
+            if (wetterdaten.Aussentemperatur > this.Zimmer.Temperaturvorgabe) {
                 // Jalousie schliessen
-                if(!this.JalousieHeruntergefahren) {
+                if (!this.JalousieHeruntergefahren) {
                     if (this.Zimmer.PersonenImZimmer) {
                         Console.WriteLine($"{this.Name}: Jalousie kann nicht geschlossen werden weil Personen im Zimmer sind.");
-                    } else {
+                    }
+                    else {
                         Console.WriteLine($"{this.Name}: Jalousie wird geschlossen.");
                         JalousieHeruntergefahren = true;
                     }
                 }
-            } else {
+            }
+            else {
                 // Jalousie öffnen
                 if (this.JalousieHeruntergefahren) {
                     Console.WriteLine($"{this.Name}: Jalousie wird geöffnet.");

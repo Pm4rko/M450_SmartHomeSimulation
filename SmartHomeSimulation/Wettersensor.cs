@@ -1,6 +1,5 @@
 ﻿namespace M320_SmartHome {
-    public class Wettersensor : IWettersensor
-    {
+    public class Wettersensor : IWettersensor {
         /// <summary>
         /// makes a random number
         /// </summary>
@@ -26,13 +25,13 @@
 
             var deltaTemp = rand * (regen ? -1 : 1);
             var newTemp = this.currentTemp + deltaTemp;
-            if(newTemp < MIN_TEMP || newTemp > MAX_TEMP) {
+            if (newTemp < MIN_TEMP || newTemp > MAX_TEMP) {
                 deltaTemp *= -1;
             }
             this.currentTemp += deltaTemp;
             this.currentTemp = Math.Round(this.currentTemp, 1);
             var wind = Math.Round(35d * rand, 1);
-           
+
 
             return new Wetterdaten { Aussentemperatur = this.currentTemp, Windgeschwindigkeit = wind, Regen = regen };
         }

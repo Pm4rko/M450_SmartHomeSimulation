@@ -6,17 +6,18 @@
         public bool HeizungsventilOffen { get; private set; }
 
         public override void VerarbeiteWetterdaten(Wetterdaten wetterdaten) {
-            if(wetterdaten.Aussentemperatur < this.Zimmer.Temperaturvorgabe) {
+            if (wetterdaten.Aussentemperatur < this.Zimmer.Temperaturvorgabe) {
                 // Ventil öffnen
-                if(!this.HeizungsventilOffen) {
+                if (!this.HeizungsventilOffen) {
                     Console.WriteLine($"{this.Name}: Heizungsventil wird geöffnet.");
                     HeizungsventilOffen = true;
                 }
-            } else {
+            }
+            else {
                 // Ventil schliessen
                 if (this.HeizungsventilOffen) {
                     Console.WriteLine($"{this.Name}: Heizungsventil wird geschlossen.");
-                    HeizungsventilOffen= false;
+                    HeizungsventilOffen = false;
                 }
             }
 

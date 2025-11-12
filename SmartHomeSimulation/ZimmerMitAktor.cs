@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace M320_SmartHome {
+﻿namespace M320_SmartHome {
     public abstract class ZimmerMitAktor : Zimmer {
         public ZimmerMitAktor(Zimmer zimmer) : base(zimmer.Name) {
-           this.Zimmer = zimmer;
+            this.Zimmer = zimmer;
         }
 
         public override double Temperaturvorgabe { get => this.Zimmer.Temperaturvorgabe; set => this.Zimmer.Temperaturvorgabe = value; }
@@ -19,14 +13,11 @@ namespace M320_SmartHome {
             Zimmer.VerarbeiteWetterdaten(wetterdaten);
         }
 
-        public T GetZimmerMitAktor<T>() where T : Zimmer
-        {
-            if (this is T)
-            {
+        public T? GetZimmerMitAktor<T>() where T : Zimmer {
+            if (this is T) {
                 return this as T;
             }
-            if (this.Zimmer is ZimmerMitAktor)
-            {
+            if (this.Zimmer is ZimmerMitAktor) {
                 return ((ZimmerMitAktor)this.Zimmer).GetZimmerMitAktor<T>();
             }
             return null;

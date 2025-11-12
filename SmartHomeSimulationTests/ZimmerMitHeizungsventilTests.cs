@@ -1,25 +1,15 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using M320_SmartHome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace M320_SmartHome.Tests {
 
-namespace M320_SmartHome.Tests
-{
     [TestClass]
-    public class ZimmerMitHeizungsventilTests
-    {
+    public class ZimmerMitHeizungsventilTests {
         [TestMethod]
-        public void VerarbeiteWetterdaten_TemperatureBelowSetpoint_OpensHeaterValve()
-        {
+        public void VerarbeiteWetterdaten_TemperatureBelowSetpoint_OpensHeaterValve() {
             // Arrange
-            int minute =30;
-            var wettersensor = new WettersensorMock(15,5, false); // cold
+            int minute = 30;
+            var wettersensor = new WettersensorMock(15, 5, false);
             var wohnung = new Wohnung(wettersensor);
 
-            wohnung.SetTemperaturvorgabe("Wohnzimmer",20);
+            wohnung.SetTemperaturvorgabe("Wohnzimmer", 20);
             wohnung.SetPersonenImZimmer("Wohnzimmer", false);
 
             // Act
@@ -32,14 +22,13 @@ namespace M320_SmartHome.Tests
         }
 
         [TestMethod]
-        public void VerarbeiteWetterdaten_TemperatureAboveOrEqualSetpoint_ClosesHeaterValve()
-        {
+        public void VerarbeiteWetterdaten_TemperatureAboveOrEqualSetpoint_ClosesHeaterValve() {
             // Arrange
-            int minute =10;
-            var wettersensor = new WettersensorMock(25,3, false); // warm
+            int minute = 10;
+            var wettersensor = new WettersensorMock(25, 3, false);
             var wohnung = new Wohnung(wettersensor);
 
-            wohnung.SetTemperaturvorgabe("Wohnzimmer",20);
+            wohnung.SetTemperaturvorgabe("Wohnzimmer", 20);
             wohnung.SetPersonenImZimmer("Wohnzimmer", false);
 
             // Act
